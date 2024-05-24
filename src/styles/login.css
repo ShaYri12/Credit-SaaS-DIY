@@ -1,0 +1,330 @@
+
+.login-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+        to top right,
+        var(--primary-color) 30%, 
+        var(--secondary-color) 90% 
+    );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+}
+
+.login-section .container {
+  position: relative;
+  width: 900px;
+  height: 610px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.login-section .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.login-section .container .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: var(--secondary-color);
+  transition: 0.5s;
+}
+
+.login-section .container .user .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-section .container .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+.login-section .container .user .formBx form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.login-section .container .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #e4e4e4;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.login-section .container .user .formBx form input[type='submit'] {
+  max-width: 100px;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.login-section .container .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.login-section .container .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.login-section .container .signupBx {
+  pointer-events: none;
+}
+
+.login-section .container.active .signupBx {
+  pointer-events: initial;
+}
+
+.login-section .container .signupBx .formBx {
+  left: 100%;
+}
+
+.login-section .container.active .signupBx .formBx {
+  left: 0;
+}
+
+.login-section .container .signupBx .imgBx {
+  left: -100%;
+}
+
+.login-section .container.active .signupBx .imgBx {
+  left: 0%;
+}
+
+.login-section .container .signinBx .formBx {
+  left: 0%;
+}
+
+.login-section .container.active .signinBx .formBx {
+  left: 100%;
+}
+
+.login-section .container .signinBx .imgBx {
+  left: 0%;
+}
+
+.login-section .container.active .signinBx .imgBx {
+  left: -100%;
+}
+
+@media (max-width: 991px) {
+    .login-section .container {
+    max-width: 400px;
+  }
+
+  .login-section .container .imgBx {
+    display: none;
+  }
+
+  .login-section .container .user .formBx {
+    width: 100%;
+  }
+}
+
+.btn-login, .btn-signup{
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 7px 15px;
+    font-weight: bold;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-signup:hover,
+.btn-signup:focus
+{
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+.btn-next, .btn-submit{
+    background-color: var(--primary-color);
+    color:#fff
+}
+
+.btn-next:hover,
+.btn-next:focus,
+.btn-submit:hover,
+.btn-submit:focus{
+    background-color: #55539e !important;
+    color:#fff !important;
+}
+
+.btn-back{
+    border: 2px solid var(--primary-color);
+    color:var(--primary-color)
+}
+
+.btn-back:hover,
+.btn-back:focus{
+    background-color: #55539e !important;
+    color:#fff !important;
+}
+
+@media screen and (max-width:991px) {
+    .imgBx{
+        display: none !important;
+    }
+}
+
+/* Progress bar styles */
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+}
+
+/* Progress step container */
+.progress-step {
+    display: flex;
+    align-items: center;
+}
+
+/* Checkpoint circle styles */
+.progress-checkpoint {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    border-radius: 50%;
+    border: 2px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    position: relative;
+    z-index: 2; /* Ensure it is above the connector line */
+    font-size: 23px;
+}
+
+/* Active checkpoint circle styles */
+.progress-checkpoint.active {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Connector line styles */
+.progress-connector {
+    width: 30px; /* Adjust length as needed */
+    height: 2px;
+    background-color: #cccccc;
+}
+
+/* Completed connector line styles */
+.progress-connector.completed {
+    background-color: var(--primary-color);
+}
+
+
+/* Style for package option boxes */
+.package-option {
+  border: 2px solid #ccc; /* Border for each box */
+  padding: 10px; /* Padding inside the box */
+  margin-bottom: 10px; /* Margin between boxes */
+  cursor: pointer; /* Make it look clickable */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text */
+  transition: border-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+/* Style for selected package option box */
+.package-option.selected {
+  border: 2px solid var(--secondary-color); /* Green border color for selected box */
+  background-color: #b2223336; /* Light green background for selected box */
+}
+
+/* Grid container for package options */
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-gap: 10px; /* Gap between grid items */
+}
+
+/* Grid layout for smaller screens */
+@media (max-width: 600px) {
+  .package-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column */
+  }
+}
+
+/* Base styles for form steps */
+.form-step {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+
+/* Active form step */
+.form-step.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+/* Transitions for smooth navigation */
+.form-step:not(.active) {
+  transform: translateX(-10%);
+}
+
+

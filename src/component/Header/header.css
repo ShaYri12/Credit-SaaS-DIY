@@ -1,0 +1,66 @@
+.navbar-behind{
+    height: 70px;
+}
+
+.logo img{
+    width:4rem;
+}
+
+
+.navbar-toggler{
+    margin-top:-10px;
+}
+
+.navbar{
+    height:70px;    
+    transition: 0.5s;
+}
+
+
+.nav-item a{
+    font-size: 1rem;
+}
+
+.nav-item a:hover{
+    color: var(--secondary-color);
+}
+
+.nav-item a.active{
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+
+.btn-signin {
+    background-image: linear-gradient(
+        to top right,
+        var(--primary-color) 30%, 
+        var(--secondary-color) 90%
+    );
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 10px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.btn-signin:hover,
+.btn-signin:focus {
+    background-image: linear-gradient(
+        to bottom left,
+        var(--primary-color) 30%, 
+        var(--secondary-color) 90%
+    );
+}
+
+
+
+
+
+.offcanvas.offcanvas-end {
+    width: 250px;
+}
+
+  

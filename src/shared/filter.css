@@ -1,0 +1,38 @@
+.filter-dropdown{
+    width: 196px;
+}
+
+.filter-dropdown button{
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.filter-dropdown button:hover{
+    background-color: var(--secondary-color) !important;
+}
+
+.filter-dropdown button:focus{
+    background-color: var(--primary-color) !important;
+    color:#fff
+}
+
+.dropdown-item{
+    padding: 7px 10px;
+}
+
+.dropdown-item:focus,
+.dropdown-item.active{
+    background-color: var(--primary-color) !important;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
